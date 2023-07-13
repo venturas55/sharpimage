@@ -1,0 +1,157 @@
+body{
+  background-color: slategray;
+}
+
+img{
+  width: 300px;
+}
+
+
+.container{
+    width: 400px;
+    margin: 0 auto;
+  }
+  .dice{
+    border: solid 3px #aaa;
+    border-radius: 3px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 7px auto;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    
+    .dot{
+      border-radius: 50%;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #000;
+    }
+  }
+  
+  .dice:first-child{
+    .dot{
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+  
+  .dice:nth-child(2){
+    .dot{
+      &:first-child{
+        top: 20px;
+        left: 20px;
+      }
+      &:last-child{
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+  }
+  
+  .dice:nth-child(3){
+    .dot{
+      &:first-child{
+        top: 15px;
+        left: 15px;
+      }
+      &:nth-child(2){
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+      &:last-child{
+        bottom: 15px;
+        right: 15px;
+      }
+    }
+  }
+  
+  .dice:nth-child(4){
+    .dot{  
+      &:first-child{
+        top: 15px;
+        left: 15px;
+      }
+      &:nth-child(2){
+        top: 15px;
+        right: 15px;
+      }
+      &:nth-child(3){
+        bottom: 15px;
+        left: 15px;
+      }
+      &:last-child{
+        bottom: 15px;
+        right: 15px;
+      }
+     }
+  }
+  
+  .dice:nth-child(5){
+    .dot{  
+      &:first-child{
+        top: 15px;
+        left: 15px;
+      }
+      &:nth-child(2){
+        top: 15px;
+        right: 15px;
+      }
+      &:nth-child(3){
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+      &:nth-child(4){
+        bottom: 15px;
+        left: 15px;
+      }
+      &:last-child{
+        bottom: 15px;
+        right: 15px;
+      }
+    }
+  }
+  
+  .dice:nth-child(6){
+    .dot{  
+      &:first-child{
+        top: 15px;
+        left: 15px;
+      }
+      &:nth-child(2){
+        top: 15px;
+        right: 15px;
+      }
+      &:nth-child(3){
+        top: 0;
+        bottom: 0;
+        left: 15px;
+        margin: auto;
+      }
+      &:nth-child(4){
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        margin: auto;
+      }
+      &:nth-child(5){
+        bottom: 15px;
+        left: 15px;
+      }
+      &:last-child{
+        bottom: 15px;
+        right: 15px;
+      }
+    }
+  }
